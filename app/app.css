@@ -589,3 +589,15 @@ button:not([disabled]) {
  ===============
  */
 
+.header {
+  font-size: 20px;
+  margin-left: 25px;
+  position: relative;
+  top: -7px;
+}
+
+.url {
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+}
