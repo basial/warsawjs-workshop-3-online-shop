@@ -7,6 +7,7 @@ import * as searchBarComponent from './searchBar.component'
 import * as productsListComponent from './productsList.component'
 import * as promotionsListComponent from './promotionsList.component'
 import * as productItemComponent from './productItem.component'
+import * as countPickerComponent from './countPicker.component'
 
 export const moduleName = 'components'
 angular.module(moduleName, [])
@@ -19,3 +20,4 @@ angular.module(moduleName, [])
     .component(productsListComponent.name, productsListComponent.properties)
     .component(promotionsListComponent.name, promotionsListComponent.properties)
     .component(productItemComponent.name, productItemComponent.properties)
+    .component(countPickerComponent.name, countPickerComponent.properties)

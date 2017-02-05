@@ -1,12 +1,22 @@
+class ProductItemController {
+    countPicked(count) {
+        this.addToCart({amount: count})
+    }
+}
+
 export const name = 'productItem'
 export const properties = {
     template: `
         <div class="product-item">
-            <h2> {{ $ctrl.product.name }} </h2>
-            <p> {{ $ctrl.product.price }} </p>
+            <h2> {{ $ctrl.product.name }} {{ $ctrl.product.price | currency:'PLN' }} </h2>
+            <p> {{ $ctrl.product.description }}</p>
+            
+            <count-picker on-pick="$ctrl.countPicked(count)"></count-picker>
         </div>
     `,
     bindings: {
-        product: '<item'
-    }
+        product: '<item',
+        addToCart: '&onAddToCart'
+    },
+    controller: ProductItemController
 }
